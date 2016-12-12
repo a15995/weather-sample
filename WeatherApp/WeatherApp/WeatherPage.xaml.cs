@@ -15,11 +15,11 @@ namespace WeatherApp
             this.BindingContext = new Weather();
         }
 
-        private async void GetWeatherBtn_Clicked(object sender, EventArgs e)
+        private async void GetWeatherBtn_Clicked(object sender, EventArgs e) // Statisk klasse, der overskriver eksisterende vejrdata og indsætter nye
         {
             if (!String.IsNullOrEmpty(zipCodeEntry.Text))
             {
-                Weather weather = await Core.GetWeather(zipCodeEntry.Text);
+                Weather weather = await Core.GetWeather(zipCodeEntry.Text); 
                 if (weather != null)
                 {
                     this.BindingContext = weather;

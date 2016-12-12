@@ -1,6 +1,6 @@
 ﻿namespace WeatherApp
 {
-    public class Weather
+    public class Weather // Properties
     {
         public string Title { get; set; }
         public string Temperature { get; set; }
@@ -10,7 +10,7 @@
         public string Sunrise { get; set; }
         public string Sunset { get; set; }
 
-        public Weather()
+        public Weather() // Constructor
         {
             //Because labels bind to these values, set them to an empty string to
             //ensure that the label appears on all platforms by default.

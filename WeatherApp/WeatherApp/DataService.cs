@@ -15,8 +15,8 @@ namespace WeatherApp
             JContainer data = null;
             if (response != null)
             {
-                string json = response.Content.ReadAsStringAsync().Result;
-                data = (JContainer)JsonConvert.DeserializeObject(json);
+                string json = response.Content.ReadAsStringAsync().Result; // Smider resultatet ned i een lang streng
+                data = (JContainer)JsonConvert.DeserializeObject(json); // JSON-objektet konverteres fra streng til objekt
             }
 
             return data;
